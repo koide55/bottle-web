@@ -208,7 +208,7 @@ def bbs():
     now = datetime.now().strftime('%Y/%m/%d %H:%M:%S')
     comment = request.forms.decode().get('comment')
     Comments.create(user=user, comment=comment, datetime=now)
-    redirect('bss')
+    redirect('/bss')
 
 @get('/contact')
 def contact():
